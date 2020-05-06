@@ -1,0 +1,10 @@
+Started on 07-May-2020, 2:26:00 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 63a89e9c4a5f52971b6ded7041931d91a4af05ed (refs/remotes/origin/master)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Found 1 remote heads on https://github.com/ashishbasantani/jenkinsproject.git
+[poll] Latest remote head revision on refs/heads/master is: f71a385beca992cd309e46c565258a7528f68108
+Done. Took 1.4 sec
+Changes found

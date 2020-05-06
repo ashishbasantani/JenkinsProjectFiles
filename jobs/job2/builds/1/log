@@ -1,0 +1,33 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job2
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/ashishbasantani/jenkinsproject.git
+ > git init /var/lib/jenkins/workspace/job2 # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/developer^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/developer^{commit} # timeout=10
+Checking out Revision f71a385beca992cd309e46c565258a7528f68108 (refs/remotes/origin/developer)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f71a385beca992cd309e46c565258a7528f68108 # timeout=10
+Commit message: "Added feature"
+First time build. Skipping changelog.
+[job2] $ /bin/sh -xe /tmp/jenkins13956731238345418693.sh
++ sudo cp -rv index.html /root/website/testing
+'index.html' -> '/root/website/testing/index.html'
++ grep testingenv
++ sudo docker ps
++ sudo docker run -itd -p 8083:80 -v /root/website/testing:/usr/local/apache2/htdocs/ --name testingenv httpd
+b0a01eff95c6f2b08835f586cf36280602dfde64750cac0850e62322caa4efca
+docker: Error response from daemon: driver failed programming external connectivity on endpoint testingenv (61b6db0d8085e0e04e54f167d11ac526796ccff92fb3f0a77c48bedc813eaa9d):  (iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d 0/0 --dport 8083 -j DNAT --to-destination 172.17.0.2:80 ! -i docker0: iptables: No chain/target/match by that name.
+ (exit status 1)).
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

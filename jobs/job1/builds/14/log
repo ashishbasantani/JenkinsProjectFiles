@@ -1,0 +1,26 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job1
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 59ec7de1c287c0753d7968ee5f55f917daa79250 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 59ec7de1c287c0753d7968ee5f55f917daa79250 # timeout=10
+Commit message: "rollback"
+ > git rev-list --no-walk 31af743be1647c3fb8c7e01a0a3b407bdc16485a # timeout=10
+[job1] $ /bin/sh -xe /tmp/jenkins13113234181034261462.sh
++ sudo cp -rv index.html /root/website/production
+'index.html' -> '/root/website/production/index.html'
++ sudo docker ps
++ grep productionenv
+f4caa060af69        httpd               "httpd-foreground"   59 minutes ago      Up About an hour    0.0.0.0:8082->80/tcp   productionenv
++ echo 'Already Running'
+Already Running
+Finished: SUCCESS

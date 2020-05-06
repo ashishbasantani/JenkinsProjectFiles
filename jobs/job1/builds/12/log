@@ -1,0 +1,26 @@
+Started by user [8mha:////4IoHMU0qeKpsZ9JpfVDQcHU2l+6/x8aHHd+7zKu/weKwAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job1
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 2a740b2dbf0377f4ab6a2256d77af99b9183f32f (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2a740b2dbf0377f4ab6a2256d77af99b9183f32f # timeout=10
+Commit message: "Added feature"
+ > git rev-list --no-walk f71a385beca992cd309e46c565258a7528f68108 # timeout=10
+[job1] $ /bin/sh -xe /tmp/jenkins17384827033395155987.sh
++ sudo cp -rv index.html /root/website/production
+'index.html' -> '/root/website/production/index.html'
++ sudo docker ps
++ grep productionenv
+f4caa060af69        httpd               "httpd-foreground"   3 minutes ago       Up 3 minutes        0.0.0.0:8082->80/tcp   productionenv
++ echo 'Already Running'
+Already Running
+Finished: SUCCESS

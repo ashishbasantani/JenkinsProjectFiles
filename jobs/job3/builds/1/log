@@ -1,0 +1,51 @@
+Started by user [8mha:////4IoHMU0qeKpsZ9JpfVDQcHU2l+6/x8aHHd+7zKu/weKwAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job3
+using credential 4d5e1613-c25c-4a07-a61e-c2af6b8263e9
+Cloning the remote Git repository
+Cloning repository https://github.com/ashishbasantani/jenkinsproject.git
+ > git init /var/lib/jenkins/workspace/job3 # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Merging Revision 2a740b2dbf0377f4ab6a2256d77af99b9183f32f (refs/remotes/origin/master) to https://github.com/ashishbasantani/jenkinsproject.git/master, UserMergeOptions{mergeRemote='https://github.com/ashishbasantani/jenkinsproject.git', mergeTarget='master', mergeStrategy='DEFAULT', fastForwardMode='FF'}
+ > git rev-parse https://github.com/ashishbasantani/jenkinsproject.git/master^{commit} # timeout=10
+FATAL: Command "git rev-parse https://github.com/ashishbasantani/jenkinsproject.git/master^{commit}" returned status code 128:
+stdout: https://github.com/ashishbasantani/jenkinsproject.git/master^{commit}
+
+stderr: fatal: Invalid object name 'https'.
+
+hudson.plugins.git.GitException: Command "git rev-parse https://github.com/ashishbasantani/jenkinsproject.git/master^{commit}" returned status code 128:
+stdout: https://github.com/ashishbasantani/jenkinsproject.git/master^{commit}
+
+stderr: fatal: Invalid object name 'https'.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2430)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2360)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2356)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1916)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1928)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.revParse(CliGitAPIImpl.java:1030)
+	at hudson.plugins.git.GitAPI.revParse(GitAPI.java:324)
+	at hudson.plugins.git.extensions.impl.PreBuildMerge.decorateRevisionToBuild(PreBuildMerge.java:69)
+	at hudson.plugins.git.GitSCM.determineRevisionToBuild(GitSCM.java:1063)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1168)
+	at hudson.scm.SCM.checkout(SCM.java:505)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1206)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:574)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:86)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:499)
+	at hudson.model.Run.execute(Run.java:1856)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Finished: FAILURE

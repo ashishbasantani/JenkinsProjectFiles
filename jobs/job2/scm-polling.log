@@ -1,0 +1,37 @@
+Started on 06-May-2020, 10:20:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision 59ec7de1c287c0753d7968ee5f55f917daa79250 (refs/remotes/origin/developer)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+FATAL: hudson.plugins.git.GitException: Command "git ls-remote -h -- https://github.com/ashishbasantani/jenkinsproject.git" returned status code 128:
+stdout: 
+stderr: fatal: unable to access 'https://github.com/ashishbasantani/jenkinsproject.git/': Could not resolve host: github.com
+
+hudson.plugins.git.GitException: Command "git ls-remote -h -- https://github.com/ashishbasantani/jenkinsproject.git" returned status code 128:
+stdout: 
+stderr: fatal: unable to access 'https://github.com/ashishbasantani/jenkinsproject.git/': Could not resolve host: github.com
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2430)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2044)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1944)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1935)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.getHeadRev(CliGitAPIImpl.java:3262)
+	at hudson.plugins.git.GitSCM.compareRemoteRevisionWithImpl(GitSCM.java:711)
+	at hudson.plugins.git.GitSCM.compareRemoteRevisionWith(GitSCM.java:670)
+Caused: java.io.IOException
+	at hudson.plugins.git.GitSCM.compareRemoteRevisionWith(GitSCM.java:672)
+	at hudson.scm.SCM.compareRemoteRevisionWith(SCM.java:401)
+	at hudson.scm.SCM.poll(SCM.java:418)
+	at hudson.model.AbstractProject._poll(AbstractProject.java:1388)
+	at hudson.model.AbstractProject.poll(AbstractProject.java:1291)
+	at hudson.triggers.SCMTrigger$Runner.runPolling(SCMTrigger.java:605)
+	at hudson.triggers.SCMTrigger$Runner.run(SCMTrigger.java:651)
+	at hudson.util.SequentialExecutionQueue$QueueEntry.run(SequentialExecutionQueue.java:119)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Done. Took 40 sec
+No changes

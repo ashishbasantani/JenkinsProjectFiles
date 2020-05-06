@@ -1,0 +1,21 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job1
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision f71a385beca992cd309e46c565258a7528f68108 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f71a385beca992cd309e46c565258a7528f68108 # timeout=10
+Commit message: "Added feature"
+ > git rev-list --no-walk 63a89e9c4a5f52971b6ded7041931d91a4af05ed # timeout=10
+[job1] $ /bin/sh -xe /tmp/jenkins12104424554184641554.sh
++ sudo cp -v index.html /root/website
+'index.html' -> '/root/website/index.html'
+Finished: SUCCESS

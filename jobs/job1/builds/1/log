@@ -1,0 +1,26 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job1
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/ashishbasantani/jenkinsproject.git
+ > git init /var/lib/jenkins/workspace/job1 # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 63a89e9c4a5f52971b6ded7041931d91a4af05ed (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 63a89e9c4a5f52971b6ded7041931d91a4af05ed # timeout=10
+Commit message: "First commit"
+First time build. Skipping changelog.
+[job1] $ /bin/sh -xe /tmp/jenkins17871752272081909161.sh
++ sudo cp -v index.html /root/website
+'index.html' -> '/root/website/index.html'
+Finished: SUCCESS

@@ -1,0 +1,40 @@
+Started by remote host 192.168.43.113
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job3
+using credential 4d5e1613-c25c-4a07-a61e-c2af6b8263e9
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ashishbasantani/jenkinsproject.git # timeout=10
+Fetching upstream changes from https://github.com/ashishbasantani/jenkinsproject.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress -- https://github.com/ashishbasantani/jenkinsproject.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/developer^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/developer^{commit} # timeout=10
+Merging Revision 59ec7de1c287c0753d7968ee5f55f917daa79250 (refs/remotes/origin/developer) to origin/master, UserMergeOptions{mergeRemote='origin', mergeTarget='master', mergeStrategy='DEFAULT', fastForwardMode='FF'}
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f origin/master # timeout=10
+ > git remote # timeout=10
+ > git config --get remote.origin.url # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git merge --ff 59ec7de1c287c0753d7968ee5f55f917daa79250 # timeout=10
+ > git rev-parse HEAD^{commit} # timeout=10
+Seen branch in repository origin/developer
+Seen branch in repository origin/master
+Seen 2 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 59ec7de1c287c0753d7968ee5f55f917daa79250 (origin/developer, origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 59ec7de1c287c0753d7968ee5f55f917daa79250 # timeout=10
+Commit message: "rollback"
+ > git rev-list --no-walk 31af743be1647c3fb8c7e01a0a3b407bdc16485a # timeout=10
+ > git rev-list --no-walk 31af743be1647c3fb8c7e01a0a3b407bdc16485a # timeout=10
+using credential 4d5e1613-c25c-4a07-a61e-c2af6b8263e9
+ > git tag -l jenkins-job3-8 # timeout=10
+ > git tag -a -f -m Jenkins Build #8 jenkins-job3-8-SUCCESS # timeout=10
+Pushing HEAD to branch master of origin repository
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git push https://github.com/ashishbasantani/jenkinsproject.git HEAD:master # timeout=10
+Finished: SUCCESS
