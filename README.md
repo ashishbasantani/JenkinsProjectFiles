@@ -26,18 +26,24 @@
 ## Job 1 (Eye on Master branch)
 This job is for keeping track of the master branch of Git Hub. This job continuously keeps track of the commits done and whenever a new commit is done by the developer this job automatically downloads the data from Git Hub and copies it to the webserver environment folder. This job also launches the Docker container (if it was not running already) in which the production environment is running. This job helps to achieve the task of automatically putting new features into production.
 
-### Screenshots of configuration
+### Screenshots of configuration for job 1
 
 ![job 1a](https://user-images.githubusercontent.com/28612824/81255502-69c9c800-904b-11ea-961e-2d31184a5fb8.png)
 ![job 1b](https://user-images.githubusercontent.com/28612824/81255504-6afaf500-904b-11ea-8f60-b330e40d6f83.png)
 ![job 1c](https://user-images.githubusercontent.com/28612824/81255507-6c2c2200-904b-11ea-8592-b8eb0472c883.png)
 
 ## Job 2 (Eye on Developer branch)
+This job is for keeping track of the developer branch and whenever a new commit is done by a developer this job download files and keep into a testing environment and this job also launches a Docker container (if it was not running already) in which testing environment is running so that Quality Assurance and Testing team can see the new features.
+
+### Screenshots of configuration for job 2
 
 ![job 2a](https://user-images.githubusercontent.com/28612824/81255492-62a2ba00-904b-11ea-9482-db7a64494dba.png)
 ![job 2b](https://user-images.githubusercontent.com/28612824/81255495-66364100-904b-11ea-8cf4-23e8390c171d.png)
 
 ## Job 3 (Merge branches to integrate new features)
+This job is for merging the branches. Whenever a new feature is added in the developer branch the new data is kept into the testing environment so that Quality Assurance and Testing team can check the new features and provide a green flag if everything is fine. This job is executed automatically when one python script is run by the QAT team. This job also deletes the testing environment after the merging of the new features is done and the new feature is put into production.
+
+### Screenshots of configuration for job 2
 
 ![job 3a](https://user-images.githubusercontent.com/28612824/81255497-67676e00-904b-11ea-936f-2d98d3c94b13.png)
 ![job 3b](https://user-images.githubusercontent.com/28612824/81255499-68989b00-904b-11ea-9f31-23685909ba4d.png)
